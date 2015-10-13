@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:stretchColumns="0,1"
+    android:layout_marginTop="75sp"
+    >
+    <TableRow >
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cont"
+            android:onClick="btncontinueClicked"
+            />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/newGame"
+            android:onClick="btnNewGameClicked"/>
+    </TableRow>
+    <TableRow>
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/about"
+            android:onClick="btnAboutClicked" />
+        <Button
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/ext"
+            android:onClick="btnExitClicked" />
+    </TableRow>
+
+</TableLayout>

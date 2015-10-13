@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Android_Oefening2_2048</string>
+    <string name="action_settings">Settings</string>
+    <string name="cont">Continue</string>
+    <string name="about">About</string>
+    <string name="newGame">New Game</string>
+    <string name="ext">Exit</string>
+    <string name="aboutPage">
+        2048 is a single-player puzzle game created in March 2014
+        by 19-year-old Italian web developer Gabriele Cirulli,
+        in which the objective is to slide numbered tiles on
+        grid to combine them and create a tile with the number 2048.
+        It is a type of sliding block puzzle, and is very similar to the
+        Threes app released a month earlier. Cirulli created the game in a single weekend
+        as a test to see if he could program a game from scratch, describing it as a clone of
+        Veewo Studios app 1024 and getting the idea from Sami Romdhanas clone 2048,
+        and was surprised when his game received over 4 million visitors in less than a week,
+        especially since it was just a weekend project.
+        It was a way to pass the time, he said.
+        The game is free to play, Cirulli having said that he was unwilling to make money from something that didn’t invent.
+        He released a free app version of the game for iOS and Android in May 2014.
+    </string>
+    <string name="action_search">Search</string>
+</resources>
