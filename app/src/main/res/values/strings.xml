@@ -5,6 +5,7 @@
     <string name="about">About</string>
     <string name="newGame">New Game</string>
     <string name="ext">Exit</string>
+    <string name="restart">Restart</string>
     <string name="aboutPage">
         2048 is a single-player puzzle game created in March 2014
         by 19-year-old Italian web developer Gabriele Cirulli,

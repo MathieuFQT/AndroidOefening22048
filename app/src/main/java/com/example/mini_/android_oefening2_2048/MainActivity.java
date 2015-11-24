@@ -1,5 +1,6 @@
 package com.example.mini_.android_oefening2_2048;
 
+import android.app.ActionBar;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        ActionBar ab= getActionBar();
+        ab.setDisplayShowTitleEnabled(false);
+        ab.setDisplayUseLogoEnabled(false);
+        ab.setSubtitle("subtitel");
+        ab.setTitle("Titel");
+        ab.show();
 
         setContentView(R.layout.activity_main);
 
@@ -24,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     }
     public void btnNewGameClicked(View v)
     {
-        this.getClass().getSimpleName()
+        this.getClass().getSimpleName();
     }
     public void  btnAboutClicked(View v)
     {

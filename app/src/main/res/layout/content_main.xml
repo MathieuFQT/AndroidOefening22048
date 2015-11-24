@@ -10,22 +10,26 @@
     >
 
     <Button
+        android:id="@+id/cont"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/cont"
         android:onClick="btncontinueClicked"
         />
     <Button
+        android:id="@+id/newGamr"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/newGame"
         android:onClick="btnNewGameClicked"/>
     <Button
+        android:id="@+id/about"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/about"
         android:onClick="btnAboutClicked" />
     <Button
+        android:id="@+id/exit"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="@string/ext"
