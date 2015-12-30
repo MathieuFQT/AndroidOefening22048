@@ -21,5 +21,7 @@
         The game is free to play, Cirulli having said that he was unwilling to make money from something that didn’t invent.
         He released a free app version of the game for iOS and Android in May 2014.
     </string>
+    <string name="action_restart">Restart</string>
+
     <string name="action_search">Search</string>
 </resources>

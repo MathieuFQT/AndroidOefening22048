@@ -1,39 +1,73 @@
 package com.example.mini_.android_oefening2_2048;
 
-import android.app.ActionBar;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
-import android.view.View;
+import android.view.MenuItem;
+import android.widget.Button;
 
+import butterknife.Bind;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
+
+    @Bind(R.id.about)
+    Button btnAbout;
+    @Bind(R.id.newGame)
+    Button btnNew;
+    @Bind(R.id.exit)
+    Button btnExit;
+    @Bind(R.id.cont)
+    Button btnContinue;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        ActionBar ab= getActionBar();
-        ab.setDisplayShowTitleEnabled(false);
-        ab.setDisplayUseLogoEnabled(false);
-        ab.setSubtitle("subtitel");
-        ab.setTitle("Titel");
-        ab.show();
-
         setContentView(R.layout.activity_main);
-
+        ButterKnife.bind(this);
+    }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.actions_main, menu);
+        return super.onCreateOptionsMenu(menu);
     }
 
-    public void btncontinueClicked(View v)
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle presses on the action bar items
+        switch (item.getItemId()) {
+            case R.id.action_restart:
+                Log.i("Restart", "Restarting");
+                gameStartNew();
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void gameStartNew()
+    {
+        startActivity(new Intent(this, GameActivity.class));
+    }
+    @OnClick(R.id.cont)
+    public void btncontinueClicked()
     {
 
     }
-    public void btnNewGameClicked(View v)
+    @OnClick(R.id.newGame)
+    public void btnNewGameClicked()
     {
-        this.getClass().getSimpleName();
+        gameStartNew();
     }
-    public void  btnAboutClicked(View v)
+
+    @OnClick(R.id.about)
+    public void  btnAboutClicked()
     {
         AlertDialog.Builder aboutBuilder = new AlertDialog.Builder(this);
         aboutBuilder.setMessage(getString(R.string.aboutPage));
@@ -43,16 +77,9 @@ public class MainActivity extends AppCompatActivity {
         about.show();
     }
 
-    public void btnExitClicked(View v)
+    @OnClick(R.id.exit)
+    public void btnExitClicked()
     {
         this.finish();
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu items for use in the action bar
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.main_activity_actions, menu);
-        return super.onCreateOptionsMenu(menu);
     }
 }

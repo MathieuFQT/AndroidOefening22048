@@ -9,28 +9,28 @@
     >
     <TableRow >
         <Button
+            android:id="@+id/cont"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/cont"
-            android:onClick="btncontinueClicked"
             />
         <Button
+            android:id="@+id/newGame"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/newGame"
-            android:onClick="btnNewGameClicked"/>
+            android:text="@string/newGame"/>
     </TableRow>
     <TableRow>
         <Button
+            android:id="@+id/about"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/about"
-            android:onClick="btnAboutClicked" />
+            android:text="@string/about" />
         <Button
+            android:id="@+id/exit"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/ext"
-            android:onClick="btnExitClicked" />
+            android:text="@string/ext" />
     </TableRow>
 
 </TableLayout>
