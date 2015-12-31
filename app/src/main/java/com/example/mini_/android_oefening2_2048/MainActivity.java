@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.widget.Button;
+import android.widget.Toast;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
@@ -58,7 +59,7 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.cont)
     public void btncontinueClicked()
     {
-
+        Toast.makeText(MainActivity.this, "This is the continue button",Toast.LENGTH_LONG).show();
     }
     @OnClick(R.id.newGame)
     public void btnNewGameClicked()
@@ -81,5 +82,12 @@ public class MainActivity extends AppCompatActivity {
     public void btnExitClicked()
     {
         this.finish();
+    }
+
+    @Override
+    public void onBackPressed()
+    {
+        Toast.makeText(MainActivity.this, "Added a message to the back button",Toast.LENGTH_LONG).show();
+        super.onBackPressed();
     }
 }
